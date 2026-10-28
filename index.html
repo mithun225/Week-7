@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeLab - Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #17233f;
+        }
+
+        /* 7.1 Navbar using Flexbox */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #14213d;
+            color: white;
+            padding: 12px 20px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .nav-right a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button {
+            background-color: #ffb900;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 7.2 Banner centered with Flexbox */
+        .banner {
+            background-color: #315bea;
+            color: white;
+            min-height: 210px;
+            padding: 25px 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .banner h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .banner p {
+            margin: 0;
+        }
+
+        /* 7.3 Cards with Flexbox and wrapping */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 20px;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background-color: #edf1ff;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 0 0 5px;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        /* Small-screen adjustments */
+        @media (max-width: 480px) {
+            .navbar {
+                justify-content: center;
+            }
+
+            .nav-right {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .banner h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">CodeLab</div>
+
+        <nav class="nav-right">
+            <a href="#home">Home</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+            <button>Sign up</button>
+        </nav>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner" id="home">
+        <h1>Learn Web Development</h1>
+        <p>Start from zero. Build real projects.</p>
+        <button>Get started</button>
+    </section>
+
+    <!-- Course cards -->
+    <section class="cards" id="courses">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Build the structure</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Make it beautiful</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Make it smart</p>
+        </div>
+
+        <div class="card">
+            <h3>Git</h3>
+            <p>Save your work</p>
+        </div>
+
+    </section>
+
+    <div id="contact"></div>
+
+</body>
+</html>
